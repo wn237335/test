@@ -1,0 +1,1378 @@
+[
+  {
+    "section": "自身安全",
+    "desc": "基本信息",
+    "item": "sec_infos",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "自身安全",
+    "desc": "权限信息",
+    "item": "sec_perms",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "自身安全",
+    "desc": "行为信息",
+    "item": "sec_behavior",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "自身安全",
+    "desc": "病毒扫描",
+    "item": "sec_virus",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "自身安全",
+    "desc": "敏感词信息",
+    "item": "sec_words",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "自身安全",
+    "desc": "第三方SDK检测",
+    "item": "sec_other_sdk",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "自身安全",
+    "desc": "资源文件中的Apk文件",
+    "item": "aud_res_apk",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "加固壳识别",
+    "item": "aud_shield",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "java代码反编译风险",
+    "item": "aud_decompile",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "篡改/二次打包攻击风险",
+    "item": "aud_tamper",
+    "risk_level": "高",
+    "dynamic": "1",
+    "type": "Android"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "Janus签名机制漏洞",
+    "item": "aud_signaturev2",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "So文件破解风险",
+    "item": "aud_so_protect",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "应用签名未检验风险",
+    "item": "aud_signature",
+    "risk_level": "高",
+    "dynamic": "1",
+    "type": "Android"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "资源文件泄露风险",
+    "item": "aud_res_protect",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "代码未混淆风险",
+    "item": "aud_code_proguard",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "使用调试证书发布应用风险",
+    "item": "aud_certificate",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "仅使用Java代码风险",
+    "item": "aud_JniRegisterNatives_risk",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "启动隐藏服务风险",
+    "item": "aud_nolauncher_service_risk",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "应用签名算法不安全风险",
+    "item": "aud_sign_cert",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "Webview明文存储密码风险",
+    "item": "aud_savepwd",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "webviewFile同源策略绕过漏洞",
+    "item": "aud_webview_file",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "明文数字证书风险",
+    "item": "aud_cert",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "调试日志函数调用风险",
+    "item": "aud_logapi",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "数据库注入漏洞",
+    "item": "cvs_sqlinject",
+    "risk_level": "高",
+    "dynamic": "1",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "AES/DES加密算法不安全使用漏洞",
+    "item": "cvs_encrypt_risk",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "RSA加密算法不安全使用漏洞",
+    "item": "cvs_rsa_risk",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "密钥硬编码漏洞",
+    "item": "aud_key_risk",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "动态调试攻击风险",
+    "item": "aud_attack",
+    "risk_level": "高",
+    "dynamic": "1",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "Webview远程调试风险",
+    "item": "aud_webview_remote_debug",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "应用数据任意备份风险",
+    "item": "aud_backup",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "敏感函数调用风险",
+    "item": "aud_sensapi",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "数据库文件任意读写漏洞",
+    "item": "aud_dbglobalrw",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "全局可读写的内部文件漏洞",
+    "item": "cvs_globalrw",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "SharedPreferences数据全局可读写漏洞",
+    "item": "cvs_sharedprefs",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "sharedUserId属性设置漏洞",
+    "item": "cvs_sharedprefs_shareuserid",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "InternalStorage数据全局可读写漏洞",
+    "item": "cvs_internal_storage_mode",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "getDir数据全局可读写漏洞",
+    "item": "aud_get_dir",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "FFmpeg文件读取漏洞",
+    "item": "aud_ffmpeg_risk",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "java层动态调试风险",
+    "item": "aud_debug",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "剪切板敏感信息泄露漏洞",
+    "item": "aud_clipboard",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "内网测试信息残留漏洞",
+    "item": "cvs_residua",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "随机数不安全使用漏洞",
+    "item": "cvs_random",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "代码残留URL信息检测",
+    "item": "aud_url",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "残留账户密码信息检测",
+    "item": "aud_sensitive_account_password",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "残留手机号信息检测",
+    "item": "aud_sensitive_phone",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "通信数据传输安全",
+    "desc": "HTTP传输数据风险",
+    "item": "aud_trans",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "通信数据传输安全",
+    "desc": "HTTPS未校验服务器证书漏洞",
+    "item": "cvs_x509trust",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "通信数据传输安全",
+    "desc": "HTTPS未检验主机名漏洞",
+    "item": "aud_host_name",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "通信数据传输安全",
+    "desc": "HTTPS允许任意主机名漏洞",
+    "item": "aud_intermediator_risk",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "通信数据传输安全",
+    "desc": "Webview绕过证书校验漏洞",
+    "item": "cvs_wv_sslerror",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "通信数据传输安全",
+    "desc": "HTTP报文信息泄漏风险",
+    "item": "cvs_packet_capture",
+    "risk_level": "低",
+    "dynamic": "1",
+    "type": "Android"
+  },
+  {
+    "section": "身份认证安全",
+    "desc": "界面劫持风险",
+    "item": "aud_uihijack",
+    "risk_level": "中",
+    "dynamic": "1",
+    "type": "Android"
+  },
+  {
+    "section": "身份认证安全",
+    "desc": "输入监听风险",
+    "item": "aud_kb_input",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "身份认证安全",
+    "desc": "截屏攻击风险",
+    "item": "aud_screen_shots",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "动态注册Receiver风险",
+    "item": "aud_register_receiver",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "ContentProvider数据泄露漏洞",
+    "item": "cvs_dataleak",
+    "risk_level": "高",
+    "dynamic": "1",
+    "type": "Android"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "Activity组件导出风险",
+    "item": "aud_coms_activity",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "Service组件导出风险",
+    "item": "aud_coms_service",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "BroadcastReceiver组件导出风险",
+    "item": "aud_coms_receiver",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "ContentProvider组件导出风险",
+    "item": "aud_coms_provider",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "本地端口开放越权漏洞",
+    "item": "cvs_local_port",
+    "risk_level": "中",
+    "dynamic": "1",
+    "type": "Android"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "PendingIntent错误使用Intent风险",
+    "item": "aud_pendingintent",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "Intent组件隐式调用风险",
+    "item": "aud_component_hijack",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "IntentSchemeURL攻击漏洞",
+    "item": "cvs_intent_risk",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "Fragment注入攻击漏洞",
+    "item": "cvs_fragment_risk",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "反射调用风险",
+    "item": "aud_reflect",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "HTML5安全",
+    "desc": "WebStorage数据泄露风险",
+    "item": "h5_storage",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "HTML5安全",
+    "desc": "WebSQL注入漏洞",
+    "item": "h5_websql",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "HTML5安全",
+    "desc": "InnerHTML的XSS攻击漏洞",
+    "item": "h5_innerhtml",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "“应用克隆”漏洞攻击风险",
+    "item": "aud_webview_fileurl",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "动态注入攻击风险",
+    "item": "aud_inject",
+    "risk_level": "高",
+    "dynamic": "1",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "Webview远程代码执行漏洞",
+    "item": "cvs_wv_inject",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "未移除有风险的Webview系统隐藏接口漏洞",
+    "item": "aud_webview_hide_interface",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "zip文件解压目录遍历漏洞",
+    "item": "aud_unzip",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "下载任意apk漏洞",
+    "item": "cvs_anydown",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "拒绝服务攻击漏洞",
+    "item": "cvs_refuse_service",
+    "risk_level": "中",
+    "dynamic": "1",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "从sdcard加载dex风险",
+    "item": "aud_sdcard_loaddex",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "从sdcard加载so风险",
+    "item": "aud_sdcard_loadso",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "未使用编译器堆栈保护技术风险",
+    "item": "aud_stack_protect",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "未使用地址空间随机化技术风险",
+    "item": "aud_random_space",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "Root设备运行风险",
+    "item": "aud_root_device",
+    "risk_level": "低",
+    "dynamic": "1",
+    "type": "Android"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "不安全的浏览器调用漏洞",
+    "item": "aud_risk_webBrowser",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "Android"
+  },
+  {
+    "section": "自身安全",
+    "desc": "基本信息",
+    "item": "ios_sec_infos",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "自身安全",
+    "desc": "权限信息",
+    "item": "ios_sec_perms",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "自身安全",
+    "desc": "行为信息",
+    "item": "ios_sec_behavior",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "自身安全",
+    "desc": "敏感词信息",
+    "item": "ios_cvs_words",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "自身安全",
+    "desc": "第三方SDK检测",
+    "item": "ios_sec_other_sdk",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "自身安全",
+    "desc": "证书类型检测",
+    "item": "ios_check_certificate_type",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "自身安全",
+    "desc": "无法上架Appstore风险",
+    "item": "ios_appstore_risk",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "二进制代码保护",
+    "desc": "注入攻击风险",
+    "item": "ios_third_library_inject",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "二进制代码保护",
+    "desc": "可执行文件被篡改风险",
+    "item": "ios_maco_format",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "二进制代码保护",
+    "desc": "代码未混淆风险",
+    "item": "ios_aud_code_proguard",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "二进制代码保护",
+    "desc": "未使用地址空间随机化技术风险",
+    "item": "ios_compile_pie",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "二进制代码保护",
+    "desc": "未使用编译器堆栈保护技术风险",
+    "item": "ios_compile_ssp",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "客户端数据存储安全",
+    "desc": "动态调试攻击风险",
+    "item": "ios_aud_debug",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "客户端数据存储安全",
+    "desc": "输入监听风险",
+    "item": "ios_cvs_keyboard_hijack",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "客户端数据存储安全",
+    "desc": "调试日志函数调用风险",
+    "item": "ios_cvs_debug_info",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "客户端数据存储安全",
+    "desc": "Webview组件跨域访问风险",
+    "item": "ios_cvs_webView_access_file",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "客户端数据存储安全",
+    "desc": "越狱设备运行风险",
+    "item": "ios_cvs_prison_break",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "客户端数据存储安全",
+    "desc": "数据库明文存储风险",
+    "item": "ios_cvs_sqlite_risk",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "客户端数据存储安全",
+    "desc": "配置文件信息明文存储风险",
+    "item": "ios_cvs_profile_leakage",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "客户端数据存储安全",
+    "desc": "动态库信息泄露风险",
+    "item": "ios_sec_other_frameworks",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "数据传输安全",
+    "desc": "HTTP传输数据风险",
+    "item": "ios_cvs_http_protocol",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "数据传输安全",
+    "desc": "HTTPS未校验服务器证书漏洞",
+    "item": "ios_cvs_https_auth",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "数据传输安全",
+    "desc": "URL Schemes劫持漏洞",
+    "item": "ios_cvs_url_schemes",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "加密算法及密码安全",
+    "desc": "AES/DES加密算法不安全使用漏洞",
+    "item": "ios_weak_encryption",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "加密算法及密码安全",
+    "desc": "弱哈希算法使用漏洞",
+    "item": "ios_cvs_weak_hash",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "加密算法及密码安全",
+    "desc": "随机数不安全使用漏洞",
+    "item": "ios_cvs_random_risk",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "篡改和二次打包风险",
+    "item": "ios_resign",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "创建可执行权限内存风险",
+    "item": "ios_create_exec_mem",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "SQLite内存破坏漏洞",
+    "item": "ios_sql_exec_code",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "格式化字符串漏洞",
+    "item": "ios_str_format",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "明文字符串泄露风险",
+    "item": "ios_str_leakage",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "外部函数显示调用风险",
+    "item": "ios_explicit_syscall",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "系统调用暴露风险",
+    "item": "ios_syscall",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "HTML5安全",
+    "desc": "InnerHTML的XSS攻击漏洞",
+    "item": "h5_innerhtml",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "HTML5安全",
+    "desc": "WebStorage数据泄露风险",
+    "item": "h5_storage",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "iOS应用安全规范",
+    "desc": "自定义函数逻辑过于复杂风险",
+    "item": "ios_custom_method_long",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "iOS应用安全规范",
+    "desc": "XcodeGhost感染漏洞",
+    "item": "ios_cvs_xcode_ghost",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "iOS应用安全规范",
+    "desc": "不安全的API函数引用风险",
+    "item": "ios_cvs_high_risk_api",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "iOS应用安全规范",
+    "desc": "Private Methods使用检测",
+    "item": "ios_cvs_private_api",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "iOS应用安全规范",
+    "desc": "Zipper Down解压漏洞",
+    "item": "ios_cvs_zip_down",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "iOS应用安全规范",
+    "desc": "iBackDoor控制漏洞",
+    "item": "ios_cvs_iback_door",
+    "risk_level": "高",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "iOS应用安全规范",
+    "desc": "未使用自动管理内存技术风险",
+    "item": "ios_compile_arc",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "iOS应用安全规范",
+    "desc": "内存分配函数不安全风险",
+    "item": "ios_compile_arc_api",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "iOS"
+  },
+  {
+    "section": "自身安全",
+    "desc": "权限信息",
+    "item": "sdk_permission",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "自身安全",
+    "desc": "行为信息",
+    "item": "sdk_behavior",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "自身安全",
+    "desc": "敏感词信息",
+    "item": "sdk_words",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "自身安全",
+    "desc": "第三方SDK检测",
+    "item": "sdk_tpSdk",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "程序源文件安全",
+    "desc": "So文件破解风险",
+    "item": "sdk_soProtect",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "敏感函数调用风险",
+    "item": "sdk_risk_method",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "全局可读写的内部文件漏洞",
+    "item": "sdk_openFile",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "SharedPreferences数据全局可读写漏洞",
+    "item": "sdk_sharedprefs",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "getDir数据全局可读写漏洞",
+    "item": "sdk_getDir",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "随机数不安全使用漏洞",
+    "item": "sdk_random",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "本地数据存储安全",
+    "desc": "代码残留URL信息检测",
+    "item": "sdk_url",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "动态注册Receiver风险",
+    "item": "sdk_receiver",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "PendingIntent错误使用Intent风险",
+    "item": "sdk_pendingIntent",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "Intent组件隐式调用风险",
+    "item": "sdk_intent_hijack",
+    "risk_level": "低",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "Intent Scheme URL攻击漏洞",
+    "item": "sdk_intent_scheme_url",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "内部数据交互安全",
+    "desc": "Fragment 注入攻击漏洞",
+    "item": "sdk_fragment",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "从sdcard加载dex风险",
+    "item": "sdk_external_load_dex",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "恶意攻击防范能力",
+    "desc": "从sdcard加载so风险",
+    "item": "sdk_external_load_so",
+    "risk_level": "中",
+    "dynamic": "",
+    "type": "SDK"
+  },
+  {
+    "section": "自身安全",
+    "desc": "基本信息",
+    "item": "sec_infos",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "自身安全",
+    "desc": "权限信息",
+    "item": "mp_sec_perms",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "自身安全",
+    "desc": "服务器开放端口检测",
+    "item": "mp_open_port",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "通信传输安全检测",
+    "desc": "SSL证书主机名错误漏洞",
+    "item": "mp_ssl_host_error",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "通信传输安全检测",
+    "desc": "自签名SSL证书使用风险",
+    "item": "mp_ssl_self_sign",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "通信传输安全检测",
+    "desc": "使用不被信任的SSL证书风险",
+    "item": "mp_ssl_no_trust",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "通信传输安全检测",
+    "desc": "HTTP传输数据风险",
+    "item": "mp_unuse_https",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "通信传输安全检测",
+    "desc": "SSL使用中等强度密码套件风险",
+    "item": "mp_ssl_cs",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "通信传输安全检测",
+    "desc": "SSL RC4密码套件使用风险",
+    "item": "mp_ssl_rc4",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "通信传输安全检测",
+    "desc": "HTTP PUT方法使用风险",
+    "item": "mp_http_put",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "通信传输安全检测",
+    "desc": "HTTP TRACE方法使用风险",
+    "item": "mp_http_trace",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "通信传输安全检测",
+    "desc": "HTTP MOVE方法使用风险",
+    "item": "mp_http_move",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "通信传输安全检测",
+    "desc": "HTTP COPY方法使用风险",
+    "item": "mp_http_copy",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "通信传输安全检测",
+    "desc": "HTTP网络请求列表",
+    "item": "mp_http_request",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "数据泄露检测",
+    "desc": "Robots敏感目录泄露风险",
+    "item": "mp_robots_reveal",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "数据泄露检测",
+    "desc": "服务器端Banner泄漏风险",
+    "item": "mp_server_banner",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "数据泄露检测",
+    "desc": "备份文件泄漏风险",
+    "item": "mp_backup_file",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "数据泄露检测",
+    "desc": "ELMAH elmah.axd/errorlog.axd信息泄露风险",
+    "item": "mp_elmah_reveal",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "数据泄露检测",
+    "desc": "CVS文件泄露风险",
+    "item": "mp_cvs_file_reveal",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "数据泄露检测",
+    "desc": "SVN文件泄漏风险",
+    "item": "mp_svn_file_reveal",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "数据泄露检测",
+    "desc": ".DS_Store文件泄漏风险",
+    "item": "mp_ds_store_file_reveal",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "数据泄露检测",
+    "desc": "Apache不安全配置漏洞",
+    "item": "mp_apache_unsafe_reveal",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "组件漏洞检测",
+    "desc": "破壳（ShellShock）漏洞",
+    "item": "mp_shell_shock",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "组件漏洞检测",
+    "desc": "心脏滴血漏洞",
+    "item": "mp_heart_bleed",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "组件漏洞检测",
+    "desc": "SSL POODLE漏洞",
+    "item": "mp_ssl_poodle",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "组件漏洞检测",
+    "desc": "SSL DROWN攻击漏洞",
+    "item": "mp_ssl_drown",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "组件漏洞检测",
+    "desc": "SSL FREAK漏洞",
+    "item": "mp_ssl_freak",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "HTTP不安全配置检测",
+    "desc": "不安全的跨域资源共享配置风险",
+    "item": "mp_cors_risk",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  },
+  {
+    "section": "HTTP不安全配置检测",
+    "desc": "HTTP严格传输安全策略检测",
+    "item": "mp_hsts_risk",
+    "risk_level": "",
+    "dynamic": "",
+    "type": "MiniProgram"
+  }
+]
