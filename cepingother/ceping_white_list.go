@@ -21,7 +21,7 @@ type ceping_white_list struct {
 }
 
 type white_list struct {
-	Id             int `json:"id"`
+	Id             int    `json:"id"`
 	UpdatedAt      string `json:"updated_at"`
 	CreatedAt      string `json:"created_at"`
 	Type           string `json:"type"`
@@ -31,6 +31,7 @@ type white_list struct {
 }
 
 var ctx = context.Background()
+
 func Whitelist() {
 	db, err := gorm.Open("mysql", utils.Bangbangmysql())
 	if err != nil {
@@ -78,7 +79,7 @@ func Whitelist() {
 
 	ss, _ := json.Marshal(white_list2)
 
-	err = rdb.Set(ctx, "whitelist", ss, 0).Err()
+	err = rdb.Set(ctx, "ceping_whitelist", ss, 0).Err()
 	if err != nil {
 		fmt.Println(err)
 	}

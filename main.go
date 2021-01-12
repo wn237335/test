@@ -1,22 +1,20 @@
 package main
 
-import "awesomeProject6/cepingother"
+import "awesomeProject6/cepingad"
 
 func main() {
 
-
-    //1、用户数据迁移
+	//1、用户数据迁移
 	//cepinguser.Cpuser()
 
 	//2.cepingad数据迁移
 	//cepingad.Audititem()
-	//cepingad.Cepingothersdk()
-    //cepingad.Scorerule()
+	cepingad.Cepingothersdk()
+	//cepingad.Scorerule()
 	//cepingad.Sdkresult()
 	//cepingad.Settingitem1()
 	//cepingad.Studioref()
 	//cepingad.Adtask()   //cepingad.Taskresult()
-
 
 	//3.cepingipa数据迁移
 	//cepingipa.Ipaaudititem()
@@ -40,6 +38,6 @@ func main() {
 	//cepingsrc.Srctask()
 
 	//8.cepingother
-	cepingother.Whitelist()
+	//cepingother.Whitelist()
 
 }

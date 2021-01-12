@@ -2,10 +2,12 @@ package cepinguser
 
 import (
 	"awesomeProject6/utils"
+	"encoding/json"
 	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"math/rand"
+	"strings"
 	"time"
 )
 
@@ -15,29 +17,29 @@ ceping_user    =>   admin_user   client   client_template_mapper   client_user
 */
 
 type cepinguser struct {
-	AndroidStudioId           int    `json:"android_studio_id"`
-	ApiSignature              string `json:"api_signature"`
-	AuthType                  string `json:"auth_type"`
-	CepingApps                int    `json:"ceping_apps"`
-	CepingTimes               int    `json:"ceping_times"`
-	Company                   string `json:"company"`
-	ContactEmail              string `json:"contact_email"`
-	Enable                    []byte `json:"enable"`
-	IosEndtime                string `json:"ios_endtime"`
-	IosStudioId               int    `json:"ios_studio_id"`
-	IpaApps                   int    `json:"ipa_apps"`
-	IpaTimes                  int    `json:"ipa_times"`
-	IsFirstlogin              []byte `json:"is_firstlogin"`
-	LastUseday                int    `json:"last_useday"`
-	NetEndtime                string `json:"net_endtime"`
-	NetTimes                  int    `json:"net_times"`
-	Password                  string `json:"password"`
-	Platform                  string `json:"platform"`
-	Platforms                 string `json:"platforms"`
-	ReportFormats             string `json:"report_formats"`
-	ReportIosLanguage         int    `json:"report_ios_language"`
-	ReportLanguage            int    `json:"report_language"`
-	ReportLanguages           int    `json:"report_languages"`
+	AndroidStudioId   int    `json:"android_studio_id"`
+	ApiSignature      string `json:"api_signature"`
+	AuthType          string `json:"auth_type"`
+	CepingApps        int    `json:"ceping_apps"`
+	CepingTimes       int    `json:"ceping_times"`
+	Company           string `json:"company"`
+	ContactEmail      string `json:"contact_email"`
+	Enable            []byte `json:"enable"`
+	IosEndtime        string `json:"ios_endtime"`
+	IosStudioId       int    `json:"ios_studio_id"`
+	IpaApps           int    `json:"ipa_apps"`
+	IpaTimes          int    `json:"ipa_times"`
+	IsFirstlogin      []byte `json:"is_firstlogin"`
+	LastUseday        int    `json:"last_useday"`
+	NetEndtime        string `json:"net_endtime"`
+	NetTimes          int    `json:"net_times"`
+	Password          string `json:"password"`
+	Platform          string `json:"platform"`
+	Platforms         string `json:"platforms"`
+	ReportFormats     string `json:"report_formats"`
+	ReportIosLanguage int    `json:"report_ios_language"`
+	ReportLanguage    int    `json:"report_language"`
+	//	ReportLanguages           int    `json:"report_languages"`
 	ReportTemplate            string `json:"report_template"`
 	RoleType                  string `json:"role_type"`
 	SdkApps                   int    `json:"sdk_apps"`
@@ -138,7 +140,8 @@ func Cpuser() {
 		RoleName     string `json:"role_name"`
 		Email        string `json:"email"`
 		IsAdmin      bool   `json:"is_admin"`
-		Products     []struct {
+		Products     string `json:"products"`
+		Products1    []struct {
 			SystemID     uint     `json:"system_id"`         //关联的系统id
 			Name         string   `json:"name"`              //授权的服务（产品）名
 			Key          string   `json:"key"`               //授权的服务产品key
@@ -149,7 +152,7 @@ func Cpuser() {
 			Features     []string `json:"features" gorm:"-"` //产品授权的功能特点数组
 			StartedAt    string   `json:"started_at"`        // 授权开始时间
 			EndedAt      string   `json:"ended_at"`          // 授权结束时间
-		} `json:"products"`
+		} `json:"products1"`
 	}
 
 	var aps_user struct {
@@ -213,70 +216,91 @@ func Cpuser() {
 		client_user.Email = i2.ContactEmail
 		client_user.IsAdmin = true
 
-		if i2.TEndtime != "" {
-			var prou1 Prou
-			prou1.Name = "Android测评"
-			prou1.Key = "AndroidAudit"
-			prou1.EndedAt = i2.TEndtime
-			prou1.SystemID = 1
-			prou1.SampleLimit = int64(i2.CepingApps)
-			prou1.UsageCounter = int64(i2.CepingTimes)
-			client_user.Products = append(client_user.Products, prou1)
+		spla := strings.Split(i2.Platforms, ",")
+
+		i := 1
+		for {
+			if len(spla)-i < 0 {
+				break
+			}
+			sspl := spla[len(spla)-i]
+			if sspl == "android" {
+				if i2.TEndtime != "" {
+					var prou1 Prou
+					prou1.Name = "Android测评"
+					prou1.Key = "AndroidAudit"
+					prou1.EndedAt = i2.TEndtime
+					prou1.SystemID = 1
+					prou1.SampleLimit = int64(i2.CepingApps)
+					prou1.UsageCounter = int64(i2.CepingTimes)
+					client_user.Products1 = append(client_user.Products1, prou1)
+				}
+			}
+			if sspl == "ios" {
+				if i2.IosEndtime != "" {
+					var prou2 Prou
+					prou2.Name = "iOS测评"
+					prou2.Key = "IOSAudit"
+					prou2.EndedAt = i2.IosEndtime
+					prou2.SystemID = 1
+					prou2.SampleLimit = int64(i2.IpaApps)
+					prou2.UsageCounter = int64(i2.IpaTimes)
+					client_user.Products1 = append(client_user.Products1, prou2)
+				}
+			}
+			if sspl == "net" {
+				if i2.NetEndtime != "" {
+					var prou3 Prou
+					prou3.Name = "web测评"
+					prou3.Key = "WebAudit"
+					prou3.EndedAt = i2.NetEndtime
+					prou3.SystemID = 1
+					prou3.UsageCounter = int64(i2.NetTimes)
+					client_user.Products1 = append(client_user.Products1, prou3)
+				}
+			}
+			if sspl == "sdk" {
+				if i2.SdkEndtime != "" {
+					var prou4 Prou
+					prou4.Name = "SDK测评"
+					prou4.Key = "SDKAudit"
+					prou4.EndedAt = i2.SdkEndtime
+					prou4.SystemID = 1
+					prou4.SampleLimit = int64(i2.SdkApps)
+					prou4.UsageCounter = int64(i2.SdkTimes)
+					client_user.Products1 = append(client_user.Products1, prou4)
+				}
+			}
+			if sspl == "source" {
+				if i2.SourceEndTime != "" {
+					var prou5 Prou
+					prou5.Name = "源码测评"
+					prou5.Key = "SourceAudit"
+					prou5.EndedAt = i2.SourceEndTime
+					prou5.SystemID = 1
+					prou5.UsageCounter = int64(i2.SourceTimes)
+					client_user.Products1 = append(client_user.Products1, prou5)
+				}
+			}
+			if sspl == "miniprogram" {
+				if i2.MiniProgramEndtime != "" {
+					var prou6 Prou
+					prou6.Name = "小程序测评"
+					prou6.Key = "MiniProgramAudit"
+					prou6.EndedAt = i2.MiniProgramEndtime
+					prou6.SystemID = 1
+					prou6.SampleLimit = int64(i2.MiniProgramApps)
+					prou6.UsageCounter = int64(i2.MiniProgramTimes)
+					client_user.Products1 = append(client_user.Products1, prou6)
+				}
+			}
+			i++
 		}
 
-		if i2.IosEndtime != "" {
-			var prou2 Prou
-			prou2.Name = "iOS测评"
-			prou2.Key = "IOSAudit"
-			prou2.EndedAt = i2.IosEndtime
-			prou2.SystemID = 1
-			prou2.SampleLimit = int64(i2.IpaApps)
-			prou2.UsageCounter = int64(i2.IpaTimes)
-			client_user.Products = append(client_user.Products, prou2)
-		}
-
-		if i2.NetEndtime != "" {
-			var prou3 Prou
-			prou3.Name = "web测评"
-			prou3.Key = "WebAudit"
-			prou3.EndedAt = i2.NetEndtime
-			prou3.SystemID = 1
-			prou3.UsageCounter = int64(i2.NetTimes)
-			client_user.Products = append(client_user.Products, prou3)
-		}
-
-		if i2.SdkEndtime != "" {
-			var prou4 Prou
-			prou4.Name = "SDK测评"
-			prou4.Key = "SDKAudit"
-			prou4.EndedAt = i2.SdkEndtime
-			prou4.SystemID = 1
-			prou4.SampleLimit = int64(i2.SdkApps)
-			prou4.UsageCounter = int64(i2.SdkTimes)
-			client_user.Products = append(client_user.Products, prou4)
-		}
-
-		if i2.SourceEndTime != "" {
-			var prou5 Prou
-			prou5.Name = "源码测评"
-			prou5.Key = "SourceAudit"
-			prou5.EndedAt = i2.SourceEndTime
-			prou5.SystemID = 1
-			prou5.UsageCounter = int64(i2.SourceTimes)
-			client_user.Products = append(client_user.Products, prou5)
-		}
-
-		if i2.MiniProgramEndtime != "" {
-			var prou6 Prou
-			prou6.Name = "小程序测评"
-			prou6.Key = "MiniProgramAudit"
-			prou6.EndedAt = i2.MiniProgramEndtime
-			prou6.SystemID = 1
-			prou6.SampleLimit = int64(i2.MiniProgramApps)
-			prou6.UsageCounter = int64(i2.MiniProgramTimes)
-			client_user.Products = append(client_user.Products, prou6)
-		}
-
+		//android,ios,source,net,sdk,miniprogram
+		fmt.Println(client_user.Products)
+		ssaa, _ := json.Marshal(client_user.Products1)
+		client_user.Products = string(ssaa)
 		err = db2.Table("client_user").Create(&client_user).Error
 		if err != nil {
 			fmt.Println(err)
@@ -289,5 +313,6 @@ func Cpuser() {
 		if err != nil {
 			fmt.Println(err)
 		}
+		break
 	}
 }
