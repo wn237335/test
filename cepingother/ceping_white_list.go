@@ -81,6 +81,7 @@ func Whitelist() {
 
 	err = rdb.Set(ctx, "ceping_whitelist", ss, 0).Err()
 	if err != nil {
+
 		fmt.Println(err)
 	}
 }
