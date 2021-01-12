@@ -42,6 +42,7 @@ type cepinguser struct {
 	RoleType                  string `json:"role_type"`
 	SdkApps                   int    `json:"sdk_apps"`
 	SdkEndtime                string `json:"sdk_endtime"`
+	SdkTimes                  int    `json:"sdk_times"`
 	SourceTimes               int    `json:"source_times"`
 	Special                   string `json:"special"`
 	TEndtime                  string `json:"t_endtime"`
@@ -61,8 +62,7 @@ type cepinguser struct {
 	ReportWatermark           string `json:"report_watermark"`
 }
 
-
-type Prou struct{
+type Prou struct {
 	SystemID     uint     `json:"system_id"`         //关联的系统id
 	Name         string   `json:"name"`              //授权的服务（产品）名
 	Key          string   `json:"key"`               //授权的服务产品key
@@ -126,20 +126,19 @@ func Cpuser() {
 		TemplateName string `json:"template_name"`
 	}
 
-
 	var client_user struct {
-		CreatedAt    string                   `json:"created_at"`
-		UpdatedAt    string                   `json:"upadted_at"`
-		ClientKey    string                   `json:"client_key"`
-		ClientName   string                   `json:"client_name"`
-		UserAccount  string                   `json:"user_account"`
-		UserRealName string                   `json:"user_real_name"`
-		Status       int                      `json:"status"`
-		RoleId       int                      `json:"role_id"`
-		RoleName     string                   `json:"role_name"`
-		Email        string                   `json:"email"`
-		IsAdmin      bool                     `json:"is_admin"`
-		Products     []struct{
+		CreatedAt    string `json:"created_at"`
+		UpdatedAt    string `json:"upadted_at"`
+		ClientKey    string `json:"client_key"`
+		ClientName   string `json:"client_name"`
+		UserAccount  string `json:"user_account"`
+		UserRealName string `json:"user_real_name"`
+		Status       int    `json:"status"`
+		RoleId       int    `json:"role_id"`
+		RoleName     string `json:"role_name"`
+		Email        string `json:"email"`
+		IsAdmin      bool   `json:"is_admin"`
+		Products     []struct {
 			SystemID     uint     `json:"system_id"`         //关联的系统id
 			Name         string   `json:"name"`              //授权的服务（产品）名
 			Key          string   `json:"key"`               //授权的服务产品key
@@ -214,48 +213,69 @@ func Cpuser() {
 		client_user.Email = i2.ContactEmail
 		client_user.IsAdmin = true
 
-		var prou1 Prou
-		prou1.Name = "Android测评"
-		prou1.Key = "AndroidAudit"
-		prou1.EndedAt = i2.TEndtime
-		prou1.SystemID = 1
-		client_user.Products = append(client_user.Products, prou1)
+		if i2.TEndtime != "" {
+			var prou1 Prou
+			prou1.Name = "Android测评"
+			prou1.Key = "AndroidAudit"
+			prou1.EndedAt = i2.TEndtime
+			prou1.SystemID = 1
+			prou1.SampleLimit = int64(i2.CepingApps)
+			prou1.UsageCounter = int64(i2.CepingTimes)
+			client_user.Products = append(client_user.Products, prou1)
+		}
 
-		var prou2 Prou
-		prou2.Name = "iOS测评"
-		prou2.Key = "IOSAudit"
-		prou2.EndedAt = i2.IosEndtime
-		prou2.SystemID = 1
-		client_user.Products = append(client_user.Products, prou2)
+		if i2.IosEndtime != "" {
+			var prou2 Prou
+			prou2.Name = "iOS测评"
+			prou2.Key = "IOSAudit"
+			prou2.EndedAt = i2.IosEndtime
+			prou2.SystemID = 1
+			prou2.SampleLimit = int64(i2.IpaApps)
+			prou2.UsageCounter = int64(i2.IpaTimes)
+			client_user.Products = append(client_user.Products, prou2)
+		}
 
-		var prou3 Prou
-		prou3.Name = "web测评"
-		prou3.Key = "WebAudit"
-		prou3.EndedAt = i2.NetEndtime
-		prou3.SystemID = 1
-		client_user.Products = append(client_user.Products, prou3)
+		if i2.NetEndtime != "" {
+			var prou3 Prou
+			prou3.Name = "web测评"
+			prou3.Key = "WebAudit"
+			prou3.EndedAt = i2.NetEndtime
+			prou3.SystemID = 1
+			prou3.UsageCounter = int64(i2.NetTimes)
+			client_user.Products = append(client_user.Products, prou3)
+		}
 
-		var prou4 Prou
-		prou4.Name = "SDK测评"
-		prou4.Key = "SDKAudit"
-		prou4.EndedAt = i2.SdkEndtime
-		prou4.SystemID = 1
-		client_user.Products = append(client_user.Products, prou4)
+		if i2.SdkEndtime != "" {
+			var prou4 Prou
+			prou4.Name = "SDK测评"
+			prou4.Key = "SDKAudit"
+			prou4.EndedAt = i2.SdkEndtime
+			prou4.SystemID = 1
+			prou4.SampleLimit = int64(i2.SdkApps)
+			prou4.UsageCounter = int64(i2.SdkTimes)
+			client_user.Products = append(client_user.Products, prou4)
+		}
 
-		var prou5 Prou
-		prou5.Name = "源码测评"
-		prou5.Key = "SourceAudit"
-		prou5.EndedAt = i2.SourceEndTime
-		prou5.SystemID = 1
-		client_user.Products = append(client_user.Products, prou5)
+		if i2.SourceEndTime != "" {
+			var prou5 Prou
+			prou5.Name = "源码测评"
+			prou5.Key = "SourceAudit"
+			prou5.EndedAt = i2.SourceEndTime
+			prou5.SystemID = 1
+			prou5.UsageCounter = int64(i2.SourceTimes)
+			client_user.Products = append(client_user.Products, prou5)
+		}
 
-		var prou6 Prou
-		prou6.Name = "小程序测评"
-		prou6.Key = "MiniProgramAudit"
-		prou6.EndedAt = i2.MiniProgramEndtime
-		prou6.SystemID = 1
-		client_user.Products = append(client_user.Products, prou6)
-
+		if i2.MiniProgramEndtime != "" {
+			var prou6 Prou
+			prou6.Name = "小程序测评"
+			prou6.Key = "MiniProgramAudit"
+			prou6.EndedAt = i2.MiniProgramEndtime
+			prou6.SystemID = 1
+			prou6.SampleLimit = int64(i2.MiniProgramApps)
+			prou6.UsageCounter = int64(i2.MiniProgramTimes)
+			client_user.Products = append(client_user.Products, prou6)
+		}
 
 		err = db2.Table("client_user").Create(&client_user).Error
 		if err != nil {
@@ -269,6 +289,5 @@ func Cpuser() {
 		if err != nil {
 			fmt.Println(err)
 		}
-
 	}
 }
